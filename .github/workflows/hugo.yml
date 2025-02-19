@@ -60,14 +60,16 @@ jobs:
       - name: Verify build output
         run: ls -lah ./public
 
-
+        # Add a step to clean any potential problematic files
+      - name: Clean and prepare artifact
+        run: |
+          find public/ -type l -delete  # Remove any symbolic links
+          find public/ -type f -links +1 -delete  # Remove hard links
+      
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3  # Using pages-specific upload action
         with:
-          name: github-pages
           path: ./public
-          retention-days: 1
-          if-no-files-found: error
 
   # Deployment job
   deploy:
