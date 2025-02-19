@@ -1,0 +1,39 @@
+baseURL = "https://patrick-go.github.io"
+languageCode = "en-us"
+title = "Patrick The Rising Start"
+theme = "PaperMod"                       # or your chosen theme
+
+# Important settings for a technical blog
+[params]
+# Enable syntax highlighting
+syntax_highlighting = true
+# Enable table of contents
+toc = true
+# Show reading time
+show_reading_time = true
+# Show code copy buttons
+show_code_copy_buttons = true
+
+[menu]
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 10
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 20
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 30
+
+[markup]
+[markup.highlight]
+style = "monokai"
+lineNos = true
+[markup.goldmark.renderer]
+unsafe = true # Allow HTML in markdown
