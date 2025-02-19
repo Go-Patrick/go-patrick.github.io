@@ -1,6 +1,6 @@
 baseURL = "https://patrick-go.github.io"
 languageCode = "en-us"
-title = "Patrick The Rising Start"
+title = "From Zero to DevOps"
 theme = "PaperMod"                       # or your chosen theme
 
 # Important settings for a technical blog
